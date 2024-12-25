@@ -17,7 +17,8 @@ public class MessagePublisher {
     public MessagePublisher() {
         this.jedisPool = RedisConfig.getJedisPool();
         this.objectMapper = new ObjectMapper();
-        // Register the Java 8 date/time module
+        // Register the JavaTimeModule with our ObjectMapper, it adds these serializers, allowing Jackson to
+        // properly convert the Instant timestamp to JSON and back
         this.objectMapper.registerModule(new com.fasterxml.jackson.datatype.jsr310.JavaTimeModule());
     }
 
