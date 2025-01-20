@@ -1,5 +1,5 @@
 # RedisPubSub
-
+ttt
 1. Build the project: mvn clean package"
 
 2. Run the Subscriber with: mvn exec:java -Dexec.mainClass="com.prototype.pubsub.subscriber.MessageSubscriber"
